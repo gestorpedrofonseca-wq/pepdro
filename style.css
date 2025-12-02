@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg-color: #0a0a0a;
     --text-color: #e0e0e0;
     --primary-color: #3b82f6;
@@ -547,10 +547,73 @@ footer {
     color: var(--primary-color);
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
 /* Mobile Responsive - Tablets and below */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
     .navbar {
-        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--card-border);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .btn-nav {
+        margin-top: 1rem;
     }
 
     h1 {
