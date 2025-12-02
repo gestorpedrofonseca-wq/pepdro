@@ -8,7 +8,6 @@
     --card-border: rgba(255, 255, 255, 0.1);
     --gradient-main: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
     --gradient-hover: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-    /* Updated Fonts for "FIRST" style */
     --font-heading: 'Syne', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
 }
@@ -30,7 +29,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     cursor: none;
-    /* Custom cursor */
 }
 
 /* Custom Cursor */
@@ -75,7 +73,6 @@ h3,
 
 h1 {
     font-size: 4rem;
-    /* Increased size for impact */
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -1px;
@@ -83,7 +80,6 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    /* Increased size */
     margin-bottom: 1rem;
 }
 
@@ -198,7 +194,7 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Buttons - IMPROVED & FLASHIER */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -429,171 +425,31 @@ section {
     margin: 0 auto;
 }
 
-font-size: 0.85rem;
-}
-
-.btn-outline {
-    margin-left: 0;
-}
-
-.image-wrapper img {
-    max-width: 100%;
+/* Service Images Floating and Pulse Animation */
+.service-image-floating {
+    max-width: 250px;
     width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
+    animation: float-and-pulse 3s ease-in-out infinite;
 }
 
-.floating-card {
-    padding: 0.7rem 1rem;
-    font-size: 0.85rem;
-}
-
-.floating-card i {
-    font-size: 1.2rem;
-}
-
-.card-1 {
-    top: 5%;
-    left: -5%;
-}
-
-.card-2 {
-    bottom: 10%;
-    right: -5%;
-}
-
-/* Service Sections Mobile */
-section {
-    padding: 2.5rem 0;
-}
-
-.service-section {
-    padding: 3rem 0;
-}
-
-.service-content {
-    gap: 2rem;
-}
-
-.service-text {
-    padding: 0;
-}
-
-.subtitle {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.service-visual {
-    height: 280px;
-    border-radius: 1.5rem;
-}
-
-.service-image {
-    padding: 1rem;
-}
-
-.btn-arrow {
-    width: 100%;
-    justify-content: center;
-    padding: 0.9rem 1.5rem;
-    font-size: 0.9rem;
-}
-
-/* CTA Section Mobile */
-.cta-section {
-    padding: 4rem 0;
-}
-
-.cta-box {
-    padding: 3rem 1.5rem;
-    border-radius: 1.5rem;
-}
-
-.cta-box h2 {
-    font-size: 1.8rem;
-}
-
-.cta-subtitle {
-    font-size: 1.1rem;
-}
-
-.whatsapp-icon {
-    font-size: 4rem;
-}
-
-.btn-lg {
-    width: 100%;
-    padding: 1.2rem 2rem;
-}
-
-/* Footer Mobile */
-footer {
-    padding: 2rem 0;
-}
-
-.footer-content {
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.social-links {
-    margin-top: 1rem;
-}
-}
-
-/* Extra Small Mobile (Portrait) */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 1rem;
+@keyframes float-and-pulse {
+    0% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
     }
 
-    h1 {
-        font-size: 1.75rem;
+    50% {
+        transform: translateY(-15px);
+        filter: drop-shadow(0 0 40px rgba(59, 130, 246, 1));
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero {
-        padding-top: 5rem;
-    }
-
-    .hero-sub {
-        font-size: 0.95rem;
-    }
-
-    .btn {
-        padding: 0.9rem 1.5rem;
-        font-size: 0.8rem;
-    }
-
-    .service-visual {
-        height: 240px;
-    }
-
-    .floating-card {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.75rem;
-    }
-
-    .floating-card i {
-        font-size: 1rem;
-    }
-
-    .cta-box {
-        padding: 2.5rem 1.25rem;
-    }
-
-    .cta-box h2 {
-        font-size: 1.5rem;
-    }
-
-    .cta-subtitle {
-        font-size: 1rem;
-    }
-
-    .whatsapp-icon {
-        font-size: 3.5rem;
+    100% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
     }
 }
 
@@ -657,38 +513,236 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Service Images Floating and Pulse Animation */
-.service-image-floating {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto 2rem;
-    display: block;
-    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
-    animation: float-and-pulse 3s ease-in-out infinite;
+/* Footer */
+footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--card-border);
 }
 
-@keyframes float-and-pulse {
-    0% {
-        transform: translateY(0px);
-        filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
-    }
-
-    50% {
-        transform: translateY(-15px);
-        filter: drop-shadow(0 0 40px rgba(59, 130, 246, 1));
-    }
-
-    100% {
-        transform: translateY(0px);
-        filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
-    }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Mobile - Imagens maiores */
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Mobile Responsive - Tablets and below */
 @media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding-top: 8rem;
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-sub {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        font-size: 0.85rem;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .image-wrapper img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .floating-card {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .floating-card i {
+        font-size: 1.2rem;
+    }
+
+    .card-1 {
+        top: 5%;
+        left: -5%;
+    }
+
+    .card-2 {
+        bottom: 10%;
+        right: -5%;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    .service-section {
+        padding: 3rem 0;
+    }
+
+    .service-content {
+        gap: 2rem;
+    }
+
+    .service-text {
+        padding: 0;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Imagens dos serviços maiores no mobile */
     .service-image-floating {
         max-width: 350px;
         margin-bottom: 2.5rem;
+    }
+
+    .btn-arrow {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .cta-section {
+        padding: 4rem 0;
+    }
+
+    .cta-box {
+        padding: 3rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .whatsapp-icon {
+        font-size: 4rem;
+    }
+
+    .btn-lg {
+        width: 100%;
+        padding: 1.2rem 2rem;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Extra Small Mobile (Portrait) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .floating-card {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .floating-card i {
+        font-size: 1rem;
+    }
+
+    .cta-box {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1rem;
+    }
+
+    .whatsapp-icon {
+        font-size: 3.5rem;
     }
 }
