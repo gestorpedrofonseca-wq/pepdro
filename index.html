@@ -1,158 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Pedro Araújo | Estratégia, Design & Performance</title>
-    <meta name="description"
-        content="Estratégias, anúncios e sites que fazem sua marca aparecer, virar tendência e vender todos os dias.">
+    <title>Doação - Associação Pestalozzi de Lauro de Freitas</title>
+    <meta name="description" content="Ajude a Associação Pestalozzi de Lauro de Freitas a continuar transformando vidas de crianças e adolescentes com deficiência.">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="Doação - Associação Pestalozzi de Lauro de Freitas">
+    <meta property="og:description" content="Ajude-nos a continuar transformando vidas de crianças e adolescentes com deficiência.">
+    <meta property="og:image" content="assets/img/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Doação - Associação Pestalozzi de Lauro de Freitas">
+    <meta property="twitter:description" content="Ajude-nos a continuar transformando vidas de crianças e adolescentes com deficiência.">
+    <meta property="twitter:image" content="assets/img/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <img src="assets/img/logo.png" alt="Logo Associação" class="logo">
+        </header>
 
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">JP<span>.</span></a>
-            <nav class="navbar">
-                <a href="#sites">Sites</a>
-                <a href="#trafego">Tráfego</a>
-                <a href="#social">Social Mídia</a>
-                <a href="#contato" class="btn-nav">Fale Comigo</a>
-            </nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <!-- Pix Donation Section -->
+        <section class="donation-card">
+            <div class="qr-container">
+                <h1 class="qr-title">ASSOCIACAO PESTALOZZI DE <br> LAURO DE FREITAS - BA</h1>
+                <img src="assets/img/qrcode.png" alt="QR Code Pix" class="qr-image" id="qr-code-img">
+                <p style="margin-top: 15px; font-weight: 600; color: #666;">Aponte a câmera do seu celular para doar</p>
             </div>
-        </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="badge">Performance & Design</span>
-                    <h1>O estrategista por trás do seu <span class="gradient-text">crescimento.</span></h1>
-                    <p class="hero-sub">Se você quer crescer no digital sem enrolação, sem fórmulas velhas e sem cara de
-                        "mais do mesmo", você chegou no lugar certo. Aqui é criatividade com propósito e performance com
-                        personalidade.</p>
-                    <div class="hero-buttons">
-                        <a href="#sites" class="btn btn-primary">Ver serviços</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-wrapper">
-                        <img src="assets/profile.jpg" alt="João Pedro Araújo - 3D Avatar">
-                        <div class="floating-card card-1">
-                            <i class="fa-solid fa-rocket"></i>
-                            <span>Tendência</span>
-                        </div>
-                        <div class="floating-card card-2">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <span>Resultados</span>
-                        </div>
-                    </div>
-                    <div class="hero-bg-glow"></div>
+            <div class="pix-key-container">
+                <p style="text-align: left; font-size: 0.85rem; margin-bottom: 5px; color: #888; font-weight: 600;">CHAVE PIX COPIA E COLA:</p>
+                <div class="pix-key-wrapper">
+                    <span class="pix-key" id="pixKeyText">d2f12405-ce83-4016-8bf4-1215d4798cc6</span>
+                    <button class="copy-btn" onclick="copyPixKey()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copiar
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section id="sites" class="service-section">
-            <div class="container">
-                <div class="service-content">
-                    <div class="service-text">
-                        <img src="assets/sites.png" alt="Sites profissionais" class="service-image-floating">
-                        <h2>Sites que dão <span class="highlight">orgulho</span> de mostrar</h2>
-                        <p class="subtitle">Design moderno, rápido e feito pra converter</p>
-                        <p>Nada de site engessado. Eu crio <strong>páginas vivas</strong>, com <strong>identidade
-                                forte</strong>, visual limpo e
-                            <strong>experiência fluida</strong>. Seu site vira um <strong>cartão de visitas
-                                premium</strong> e, ao mesmo tempo, uma
-                            <strong>máquina de gerar clientes</strong>.
-                        </p>
-                        <a href="https://wa.me/+5513982175445?text=Ol%C3%A1,%20%20quero%20fazer%20um%20site%20profissional%20para%20a%20minha%20empresa."
-                            target="_blank" class="btn btn-arrow">Quero ver mais</a>
+        <section class="history-section">
+            <div class="image-stack" id="imageStack">
+                <button class="nav-btn prev" onclick="moveStack('prev')">&#10094;</button>
+                <img src="assets/img/instituicao.jpg" alt="Instituição" class="stack-img active">
+                <img src="assets/img/equipe.jpg" alt="Equipe Pestalozzi" class="stack-img behind">
+                <img src="assets/img/img1.jpg" alt="Atendimento" class="stack-img">
+                <img src="assets/img/img2.jpg" alt="Família Pestalozzi" class="stack-img">
+                <img src="assets/img/img3.jpg" alt="Atividades" class="stack-img">
+                <img src="assets/img/img4.jpg" alt="Consulta" class="stack-img">
+                <button class="nav-btn next" onclick="moveStack('next')">&#10095;</button>
+            </div>
+            <div class="history-content">
+                <div class="history-text">
+                    <p>
+                        A Associação Pestalozzi de Lauro de Freitas é uma instituição que transforma vidas por meio do atendimento especializado a crianças e adolescentes com deficiência, especialmente no Transtorno do Espectro Autista (TEA). Diariamente, oferecemos cuidado, desenvolvimento e inclusão para famílias que mais precisam.
+                    </p>
+                    <p>
+                        Para continuar esse trabalho essencial, lançamos esta vaquinha solidária. Sua doação ajuda a manter atendimentos, garantir profissionais qualificados e oferecer mais qualidade de vida para nossos assistidos.
+                    </p>
+                    <p style="font-weight: 600; color: var(--yellow-dark);">
+                        Cada contribuição faz a diferença. Junte-se a nós nessa causa e ajude a construir um futuro com mais oportunidades, dignidade e inclusão.
+                    </p>
+                </div>
+                <div class="trust-seals">
+                    <div class="seal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 11 12 14 15 11"></polyline></svg>
+                        <span>Doação Certificada</span>
+                    </div>
+                    <div class="seal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"></path><path d="M12 7v5l3 3"></path></svg>
+                        <span>Transparência Total</span>
+                    </div>
+                    <div class="seal autism-seal">
+                        <svg viewBox="0 0 512 512" style="fill: currentColor;"><path d="M432 256c0-44.2-35.8-80-80-80h-48v-24c0-39.8-32.2-72-72-72s-72 32.2-72 72v24H112c-44.2 0-80 35.8-80 80v48h24c39.8 0 72 32.2 72 72s-32.2 72-72 72h-24v48c0 44.2 35.8 80 80 80h48v-24c0-39.8 32.2-72 72-72s72 32.2 72 72v24h48c44.2 0 80-35.8 80-80v-48h-24c-39.8 0-72-32.2-72-72s32.2-72 72-72h24v-48z"/></svg>
+                        <span>Conscientização TEA</span>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="trafego" class="service-section alt-bg">
-            <div class="container">
-                <div class="service-content">
-                    <div class="service-text">
-                        <img src="assets/trafego-pago.png" alt="Tráfego pago" class="service-image-floating">
-                        <h2>Serviço de <span class="highlight">Tráfego pago</span></h2>
-                        <p class="subtitle">Anúncios ousados, inteligentes e feitos pra chamar clique</p>
-                        <p>Campanhas criadas no detalhe <strong>copy, criativo e segmentação</strong> combinados pra
-                            entregar o que
-                            importa: <strong>gente certa, no momento certo</strong>, pagando o preço certo.</p>
-                        <a href="https://wa.me/+5513982175445?text=Ol%C3%A1,%20%20quero%20fazer%20tr%C3%A1fego%20pago%20para%20a%20minha%20empresa."
-                            target="_blank" class="btn btn-arrow">Ver estratégias</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="social" class="service-section">
-            <div class="container">
-                <div class="service-content">
-                    <div class="service-text">
-                        <img src="assets/social-media.png" alt="Gestão de Social Mídia" class="service-image-floating">
-                        <h2>Gestão de <span class="highlight">Social Mídia</span></h2>
-                        <p class="subtitle">Conteúdo estratégico, criativo e com vibe inovadora.</p>
-                        <p>Aqui não tem postagem aleatória. Eu <strong>estudo sua marca</strong>, encontro o que trava
-                            seu engajamento e
-                            crio um <strong>planejamento moderno, visual e inteligente</strong> pra fazer seu perfil
-                            crescer de verdade.
-                        </p>
-                        <a href="https://wa.me/+5513982175445?text=Ol%C3%A1,%20%20quero%20fazer%20um%20social%20midia%20de%20respeito%20para%20a%20minha%20empresa."
-                            target="_blank" class="btn btn-arrow">Quero Social Mídia + Gestão Criativa</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="cta-section">
-            <div class="container">
-                <div class="cta-box">
-                    <div class="whatsapp-icon-container">
-                        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                    </div>
-                    <h2>Chama no WhatsApp</h2>
-                    <p class="cta-subtitle">Bora tirar sua ideia do papel e transformar em resultado?</p>
-                    <a href="https://wa.me/+5513982175445?text=Ol%C3%A1,%20%20gostaria%20de%20saber%20mais%20sobre%20o%20seu%20trabalho."
-                        target="_blank" class="btn btn-primary btn-lg">Entrar em contato</a>
-                </div>
-            </div>
-        </section>
-    </main>
+    </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">JP.</div>
-                <p>&copy; 2025 - Todos os direitos reservados.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
+        <div class="footer-contacts">
+            <a href="https://wa.me/5571983486290" target="_blank" class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.28-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +55 71 98348-6290
+            </a>
+            <a href="https://www.instagram.com/pestalozzilaurodefreitas/" target="_blank" class="contact-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                @pestalozzilaurodefreitas
+            </a>
         </div>
+        <p>&copy; 2026 Associação Pestalozzi de Lauro de Freitas - BA. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Toast Notification -->
+    <div id="toast">Chave Pix copiada!</div>
 
+    <script>
+        function copyPixKey() {
+            const pixKey = document.getElementById('pixKeyText').innerText;
+            navigator.clipboard.writeText(pixKey).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            });
+        }
+
+        // Image Stack Logic
+        const stack = document.getElementById('imageStack');
+        const images = Array.from(stack.querySelectorAll('.stack-img'));
+        let currentIndex = 0;
+        let autoSwap = setInterval(() => moveStack('next'), 4000);
+
+        function moveStack(direction = 'next') {
+            images[currentIndex].classList.remove('active');
+            const behindIndex = (currentIndex + 1) % images.length;
+            images[behindIndex].classList.remove('behind');
+
+            if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % images.length;
+            } else {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+            }
+
+            const nextBehind = (currentIndex + 1) % images.length;
+            
+            images[currentIndex].classList.add('active');
+            images[nextBehind].classList.add('behind');
+            
+            resetTimer();
+        }
+
+        function resetTimer() {
+            clearInterval(autoSwap);
+            autoSwap = setInterval(() => moveStack('next'), 4000);
+        }
+    </script>
+</body>
 </html>
